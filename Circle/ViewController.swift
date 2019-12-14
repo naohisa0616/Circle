@@ -13,15 +13,8 @@ class Circle {
     var radius:Double = 1.0
 //    面積（メソッド）
     var area:Double {
-//        面積を返す
-        get{
-            return radius * radius * Double.pi
-        }
-//        面積を設定する（半径を設定する）
-        set (menseki){
-//            areaの値を設定すると見せて、実際はradiusの値を設定します
-            radius = sqrt(menseki / Double.pi)
-        }
+//      面積を返す（setブロックが無い場合は、値をreturnで返すだけでリードオンリーになる）
+        return radius * radius * Double.pi
     }
 }
 
@@ -33,19 +26,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //  円を作る
             let myCircle = Circle()
-        //  初期値の半径と面積
-            print("半径\(myCircle.radius)")
-            print("面積\(myCircle.area)")
+//        半径を設定する
+            myCircle.radius = 10
+//        面積を調べる
+            let menseki = myCircle.area
+            print(menseki)
+
         
-        //  面積を2倍にする
-            myCircle.area *= 2
-            print("半径\(myCircle.radius)")
-            print("面積\(myCircle.area)")
-        
-        //  半径を3.0にする
-        myCircle.radius = 3.0
-            print("半径\(myCircle.radius)")
-            print("面積\(myCircle.area)")
     }
 
 
