@@ -35,17 +35,17 @@ class ViewController: UIViewController {
             let myCircle = Circle()
         //  初期値の半径と面積
             print("半径\(myCircle.radius)")
-            print("半径\(myCircle.area)")
+            print("面積\(myCircle.area)")
         
         //  面積を2倍にする
             myCircle.area *= 2
             print("半径\(myCircle.radius)")
-            print("半径\(myCircle.area)")
+            print("面積\(myCircle.area)")
         
         //  半径を3.0にする
         myCircle.radius = 3.0
             print("半径\(myCircle.radius)")
-            print("半径\(myCircle.area)")
+            print("面積\(myCircle.area)")
     }
 
 
